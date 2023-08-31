@@ -9,7 +9,7 @@
 #'
 #'
 #' @param comparisons List of comparison dataframes from protools2 limma comparison.
-#' @param combipept Combipept data from pescal output.
+#' @param combipept Combipept data from pescal output. Requires whole sheet.
 #' @param databases Databases to use in pathway enrichment search.
 #' @param graph.heading String. Title for graphs.
 #'
@@ -65,4 +65,5 @@ ptmprot_pathway_enrichment <- function(comparisons,
     }, error=function(e) all_pe_results[[n]] <- NA
     )
   }
+  return(all_pe_results)
 }

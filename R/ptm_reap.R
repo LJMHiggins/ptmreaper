@@ -88,7 +88,7 @@ read_output_areas <- function(pescal.path){
   return(df)
 }
 
-#' Title
+#' Normalise ptm peptide output areas
 #'
 #' @param output_areas_df Dataframe. Output areas data from pescal output.
 #'
@@ -122,7 +122,7 @@ ptm_norm <- function(output_areas_df){
 
   ## Second imputation method - due to error of log2 norm / 5
   df.norm.log2.centered.na.impute.v2 <- df.norm.log2.centered
-  df.norm.log2.centered.na.impute.v2[cols] <- laaply(
+  df.norm.log2.centered.na.impute.v2[cols] <- lapply(
     df.norm.log2.centered.na.impute.v2[cols], function(col){
       replace(col, is.na(col), min(col, na.rm = TRUE) - 1)
     }

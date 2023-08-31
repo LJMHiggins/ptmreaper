@@ -2,7 +2,7 @@
 % Please edit documentation in R/ptm_reap.R
 \name{ptm_norm}
 \alias{ptm_norm}
-\title{Title}
+\title{Normalise ptm peptide output areas}
 \usage{
 ptm_norm(output_areas_df)
 }
@@ -14,5 +14,5 @@ List of dataframes with normalised data. Note, recent focus
 has shifted to df.norm.log2.centered.na.impute.v2.
 }
 \description{
-Title
+Normalise ptm peptide output areas
 }

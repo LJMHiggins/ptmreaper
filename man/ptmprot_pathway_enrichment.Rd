@@ -9,7 +9,7 @@ ptmprot_pathway_enrichment(comparisons, combipept, databases, graph.heading)
 \arguments{
 \item{comparisons}{List of comparison dataframes from protools2 limma comparison.}
 
-\item{combipept}{Combipept data from pescal output.}
+\item{combipept}{Combipept data from pescal output. Requires whole sheet.}
 
 \item{databases}{Databases to use in pathway enrichment search.}
 

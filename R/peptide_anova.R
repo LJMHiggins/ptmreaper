@@ -27,6 +27,5 @@ peptide_anova <- function(){
 
     }
   }
-
   anova_results$qvalue <- p.adjust(anova_results$`Pr(>F)1`, method = "fdr")
 }
