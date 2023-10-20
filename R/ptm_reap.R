@@ -20,17 +20,17 @@ ptm_reap <- function(ptm_pattern,
                      pescal.path,
                      normalise = TRUE,
                      delta_score_cutoff = 10){
-  ptm_pep <- read_combipept(pescal.path = pescal.path) %>%
+  ptm_pep <- ptmreaper::read_combipept(pescal.path = pescal.path) %>%
     subset(grepl(x = pep_mod, pattern = ptm_pattern, fixed = T)) %>% # subset on acetyl
     subset(max_delta_score > delta_score_cutoff)
 
-  output_areas <- read_output_areas(pescal.path = pescal.path)
+  output_areas <- ptmreaper::read_output_areas(pescal.path = pescal.path)
 
   output_areas_ptm <- output_areas %>%
     subset(output_areas$db_id %in% ptm_pep$db_id)
 
   if (normalise == TRUE){
-    results <- ptm_norm(output_areas_ptm)
+    results <- ptmreaper::ptm_norm(output_areas_ptm)
     return(results)
   } else {
     return(output_areas_ptm)
