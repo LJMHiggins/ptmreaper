@@ -63,6 +63,7 @@ read_combipept <- function(pescal.path){
         "peptide",
         "pep_mod",
         "...25",
+        "max_ppm",
         "max_scr",
         "mean_scr",
         "max_delta_score",
